@@ -3,19 +3,10 @@
 echo "Git Hook Automated Security Check"
 echo "======================================================="
 echo "Remove old outdated Bandit report file..."
-if [ -f ./Bandit_Security_Report.csv ]; then
-  rm "./Bandit_Security_Report.csv"
-fi
-
 echo "Bandit Running..."
 bandit -r "./KubeSec-master" -f csv -o "./Bandit_Security_Report.csv"
-echo "Bandit Security Report output to poject root directory!"
+echo "Bandit Security Report output in poject root directory!"
 echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - -"
-git add "./Bandit_Security_Report.csv"
-commit_msg=$(git log --format=%B -n 1 HEAD)
-echo "Committing Bandit Report..."
-git commit -m "${commit_msg}" --no-verify
-
 echo "_______________________________________________________"
 
 
