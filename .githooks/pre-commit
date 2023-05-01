@@ -1,5 +1,6 @@
 #!/bin/sh
 
+
 echo "Git Hook Automated Security Check"
 echo "======================================================="
 echo "Remove old Bandit security report file"
