@@ -15,4 +15,4 @@ Being this projects pre-commit hooks have been shared in this repository in the 
 ```
 git config core.hooksPath .githooks
 ```
-Bandit Security Report will only be generated if python files have been edited
+Be sure you have Bandit installed and note that the Bandit Security Report will only be generated if python files have been edited.
