@@ -10,6 +10,11 @@ fi
 echo "Bandit Running..."
 bandit -r "./KubeSec-master" -f csv -o "./Bandit_Security_Report.csv"
 echo "Bandit Security Report output to poject root directory!"
+echo "- - - - - - - - - - - - - - - - - - - - - - - - - - - -"
+git add "./Bandit_Security_Report.csv"
+commit_msg=$(git log --format=%B -n 1 HEAD)
+echo "Committing Bandit Report..."
+git commit -m "${commit_msg}" --no-verify
 
 echo "_______________________________________________________"
 echo "NOTE: To include generated report in repo, perform another add and commit before pushing"
