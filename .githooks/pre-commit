@@ -11,9 +11,8 @@ echo "Bandit Running..."
 bandit -r "./KubeSec-master" -f csv -o "./Bandit_Security_Report.csv"
 echo "Bandit Security Report output to poject root directory!"
 
-git add "./Bandit_Security_Report.csv"
-
 echo "_______________________________________________________"
+echo "NOTE: To include generated report in repo push, perform another add and commit"
 
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
