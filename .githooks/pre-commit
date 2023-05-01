@@ -7,18 +7,14 @@ if [ -f ./Bandit_Security_Report.csv ]; then
   rm "./Bandit_Security_Report.csv"
 fi
 
-# echo "Remove all whitespaces before running bandit"
-# find . -type f -name '*.py' -exec sed -i 's/[[:space:]]*$//' {} \;
-
 echo "Bandit Running..."
 bandit -r "./KubeSec-master" -f csv -o "./Bandit_Security_Report.csv"
 echo "Bandit Security Report output to poject root directory!"
 
-# echo "Remove all whitespaces after running bandit"
-# find . -type f -name '*.py' -exec sed -i 's/[[:space:]]*$//' {} \;
-
 git add .
-git commit --no-verify -m "Bandit Report Added to Commit"
+previous_commit_message=$(git log -1 --pretty=%B)
+new_commit_message="$previous_commit_message with Bandit Report"
+git commit --no-verify -m new_commit_message
 
 echo "_______________________________________________________"
 
