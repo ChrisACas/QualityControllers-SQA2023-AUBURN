@@ -2,7 +2,13 @@
 
 echo "Git Hook Automated Security Check"
 echo "======================================================="
-echo "Remove old outdated Bandit report file..."
+
+if git diff-index --quiet HEAD --; then
+  echo "No changes detected in the repo, Bandit not executed"
+  echo "_______________________________________________________"
+  exit 0
+fi
+
 echo "Bandit Running..."
 bandit -r "./KubeSec-master" -f csv -o "./Bandit_Security_Report.csv"
 echo "Bandit Security Report output in poject root directory!"
