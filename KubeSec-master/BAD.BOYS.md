@@ -11,7 +11,6 @@
 - 10 YAML manifests: all handled, and under `TEST_ARTIFACTS/fp.no.reso*.yaml`  , 10 test cases added 
 
 
-
 #### FP instances for no security context 
 
 - `Not a 'no security context', as not 'kind:Pod' ` : https://github.com/in28minutes/spring-microservices-v2/blob/main/05.kubernetes/currency-exchange-service/backup/deployment-03-probes-configured.yaml [reff: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/]  
