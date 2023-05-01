@@ -1,5 +1,6 @@
 import logging 
 
+
 #creates a logging object and returns it
 def giveMeLoggingObject():
     format_str = '%(name)s-%(asctime)s - %(process)d -%(levelname)s- %(message)s'
