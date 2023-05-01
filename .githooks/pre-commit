@@ -17,7 +17,6 @@ echo "Committing Bandit Report..."
 git commit -m "${commit_msg}" --no-verify
 
 echo "_______________________________________________________"
-echo "NOTE: To include generated report in repo, perform another add and commit before pushing"
 
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
