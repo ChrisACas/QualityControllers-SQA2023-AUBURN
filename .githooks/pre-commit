@@ -3,8 +3,8 @@
 echo "Git Hook Automated Security Check"
 echo "======================================================="
 
-if git diff-index --quiet HEAD --; then
-  echo "No changes detected in the repo, Bandit not executed"
+if git diff --name-only --diff-filter=d HEAD | grep -qE '\.py$'; then
+  echo "No .py changes detected in the repo, Bandit not executed"
   echo "_______________________________________________________"
   exit 0
 fi
