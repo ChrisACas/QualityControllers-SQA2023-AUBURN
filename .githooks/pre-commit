@@ -14,7 +14,7 @@ echo "Bandit Security Report output to poject root directory!"
 git add .
 previous_commit_message=$(git log -1 --pretty=%B)
 new_commit_message="$previous_commit_message with Bandit Report"
-git commit --no-verify -m new_commit_message
+git commit --no-verify -m "$new_commit_message"
 
 echo "_______________________________________________________"
 
