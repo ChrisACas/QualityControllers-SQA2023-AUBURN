@@ -12,7 +12,6 @@ bandit -r "./KubeSec-master" -f csv -o "./Bandit_Security_Report.csv"
 echo "Bandit Security Report output to poject root directory!"
 
 git add "./Bandit_Security_Report.csv"
-git commit --no-verify -m "including Bandit Report"
 
 echo "_______________________________________________________"
 
