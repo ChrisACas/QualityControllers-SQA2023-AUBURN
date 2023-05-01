@@ -8,3 +8,10 @@
 * Nihitha Reddy Seelam
 * Pooja Chilukuru​
 * Yinbo Chen
+
+## Using repositor git hooks
+Being this projects pre-commit hooks have been shared in this repository in the .githooks directory, please execute this command initialize it in your own repository:
+
+```
+git config core.hooksPath .githooks
+```
