@@ -16,6 +16,7 @@ git commit --no-verify -m "including Bandit Report"
 
 echo "_______________________________________________________"
 
+
 if git rev-parse --verify HEAD >/dev/null 2>&1
 then
 	against=HEAD
